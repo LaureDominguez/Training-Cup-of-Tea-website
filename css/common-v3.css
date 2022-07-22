@@ -1,0 +1,458 @@
+/*General*/
+
+* {
+	box-sizing: border-box; 
+}
+
+:root {
+	--Vert: #99B111;
+	--Vert-clair: #bfcf65;
+	--Fond-vert: #596805a8;
+	--Marron: #b17711;
+	--Gris-clair: #F2F2F2;
+	--Gris-fonce: #666457;
+}
+
+html {
+	font-size: 62.5%;
+	background: var(--Gris-clair);
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Open Sans', sans-serif;
+	color: var(--Gris-fonce);
+	text-align: center;
+	cursor: default;
+}
+
+h1, h2, h3 {
+	font-family: 'Amaranth', sans-serif;
+}
+
+h1, h2 {
+	color: var(--Vert);
+}
+
+h1 {
+	font-size: 4rem;
+	white-space: pre-line;
+}
+
+h2 {
+	font-size: 2.5rem;
+	padding-top: 2em;
+}
+
+h3 {
+	font-size: 2rem;
+	color: var(--Gris-fonce);
+}
+
+h4 {
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+p {
+	line-height: 2.5rem;
+}
+
+p strong {
+	font-size: 2.4rem;
+	line-height: 5rem;
+}
+
+main img {
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	max-width: 1100px; /* On donne une largeur au container */
+	margin-left: auto; /* On centre son contenu */
+	margin-right: auto;
+}
+
+.animate {
+ 	animation-name: blink;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(1.1)
+    }
+}
+
+/****************************************/
+
+/*header*/
+
+header {
+	background: url("../img/bg.jpg"), no-repeat;
+	background-size: cover;
+	color: #fff;
+	padding: 5rem 0;
+}
+
+#panier-desktop {
+	display: none;
+}
+
+#livraison {
+	background: var(--Fond-vert);
+	padding: .5rem;
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+
+
+#ribbon {
+	display: none;
+}
+
+#panier{
+	border-radius: 50px;
+    box-shadow: 2px 2px 5px var(--Fond-vert);
+    background: #99b111f5;
+    position: fixed;
+    left: -10rem;
+    padding: 1rem;
+    margin: 1rem;
+    padding-left: 8rem;
+    z-index: 5;
+    transform: translateX(8vw);
+    transition: all .5s ease-in ;
+}
+
+#panier a {
+	display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    transition: all .5s ease-in ;
+}
+
+#panier:hover {
+	color: #fff;
+	transform: translateX(3vw);
+}
+
+
+
+#panier i {
+	border: solid 1px;
+	border-radius: 50px;
+	padding: 1rem;
+	margin-left: 1rem;
+}
+
+nav ul {
+	list-style: none;
+	padding-left: 0;
+	text-transform: uppercase;
+}
+
+nav li {
+	line-height: 4rem;
+	transition: all .2s
+}
+
+nav li > a {
+	display: block;
+}
+
+nav li:hover {
+	background: rgb(255 255 255 / 20%);
+}
+
+/****************************************/
+
+/*footer*/
+
+footer {
+	background: url("../img/bg.jpg"), no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+
+footer i {
+	font-size: 3.5rem;
+    padding-bottom: 1.5rem;
+}
+
+footer aside {
+	padding: 3rem 0;
+}
+
+.client {
+	background: var(--Fond-vert);
+	color: var(--Vert-clair);
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.client figure {
+	padding: 2rem 1rem;
+	border-radius: 5px;
+}
+
+.client figure:hover {
+	background: rgb(255 255 255 / 20%);
+	color: var(--Gris-clair);
+}
+
+.client figcaption {
+	text-transform: uppercase;
+}
+
+.contact ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.contact li {
+	line-height: 3rem;
+	color: var(--Vert-clair);
+}
+
+.contact li a {
+	display: block;
+}
+
+.contact li:hover:not(#social li) {
+	background: rgb(255 255 255 / 20%);
+	color: var(--Gris-clair);
+}
+
+#social ul {
+	display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+}
+
+#social i {
+	padding: 1rem;
+	border-radius: 5px;
+}
+
+#social a:hover {
+	color: var(--Gris-clair);
+	text-shadow: 0px 0px 10px var(--Fond-vert);
+}
+
+.license {
+	padding: 2em;
+	background: var(--Fond-vert);
+}
+
+/****************************************/
+
+/*Main*/
+
+
+main > section:not(#pub) {
+	background: #fff;
+}
+
+figure {
+	margin: 0;
+}
+
+section {
+	margin-bottom: 2em;
+}
+
+#pub {
+	display: none;
+}
+
+.owl-carousel {
+    background: var(--Gris-clair);
+}
+
+#tea {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    transition: all .5s linear;
+}
+
+#tea a {
+	transition: all .2s linear;
+}
+
+#your-tea h2 {
+	width: 100%;
+}
+
+#tea figure {
+	flex: 50%;
+	transition: all .2s linear;
+}
+
+#tea:hover > a {
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+
+#tea a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 3;
+}
+
+.buy {
+	background: var(--Marron);
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1.5rem;
+	display: block;
+    margin: 3rem auto;
+    width: fit-content;
+    transition: all .2s linear;
+}
+
+.buy:hover {
+	transform: scale(1.1);
+	opacity: 75%;
+}
+
+
+/**************************************/
+
+/*media querry*/
+
+
+/*tablette*/
+@media screen and (min-width: 780px) {
+
+	/****************** Panier ******************/
+	
+	#panier {
+		left: -10vw;
+	}
+    
+    #panier-desktop {
+    	display: block;
+    }
+    
+    #panier-desktop i {
+		border: solid 1px;
+		border-radius: 50px;
+		padding: 1rem;
+		margin: 1rem;
+	}
+
+	/****************** Header ******************/
+	
+	#ribbon {
+		display: block;
+		width: 8rem;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    z-index: 4;
+	}
+	
+	#titre {
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    padding: 0 2rem;
+	}
+	
+	header {
+		padding-top: 5rem;
+    	padding-bottom: 2rem;
+	}
+	
+	header nav ul {
+		display: flex;
+    	justify-content: space-evenly;
+	}
+	
+	header nav a {
+		padding: 0 1rem;
+	}
+
+	/****************** Main ******************/
+
+	#pub {
+		display: block;
+	}
+
+	#pub figcaption {
+		padding: 2rem;
+	}
+
+	#news  img {
+		width: 50%;
+	}
+
+	/****************** Footer ******************/
+
+	.client {
+		flex-wrap: nowrap;
+	}
+
+	.contact li {
+		border-radius: 20px;
+	}
+
+	footer aside {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+
+/*Desktop*/
+@media screen and (min-width: 980px) {
+	
+	.container {
+		width: 70%;
+	}
+
+	header nav ul {
+		justify-content: space-between;
+	}
+
+	#tea {
+		justify-content: space-around;
+		align-content: flex-start;
+		flex-wrap: nowrap;
+	}
+
+	#tea figure {
+		margin: auto 0;
+		justify-content: space-between;
+	}
+	
+	#news {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#news img {
+		width: 100%;
+	}
+}
